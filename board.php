@@ -1,12 +1,12 @@
 <?php
-$title = "หน้าหลัก";
+$title = "กระดานสนทนา";
 include("components/head.php");
 ?>
 
 <body>
   <?php include("components/navbar.php"); ?>
 
-  <div class="blogrun">หน้าหลัก</div>
+  <div class="blogrun">กระดานสนทนา</div>
 
   <?php include("components/script.php"); ?>
 </body>
