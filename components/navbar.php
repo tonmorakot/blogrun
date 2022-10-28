@@ -18,7 +18,8 @@
         <form class="d-flex">
           <input class="form-control me-2" type="text" placeholder="Username">
           <input class="form-control me-2" type="password" placeholder="Password">
-          <button class="btn btn-outline-success" type="submit">login</button>
+          <button class="btn btn-outline-success me-2" type="submit">login</button>
+          <a href="register.php" class="btn btn-outline-primary me-2">register</a>
         </form>
       </div>
     </div>

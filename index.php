@@ -1,5 +1,6 @@
 <?php
 $title = "หน้าหลัก";
+$check_page = "user";
 include("components/head.php");
 ?>
 
@@ -102,11 +103,8 @@ include("components/head.php");
 
       </div>
 
-
-
     </div>
   </div>
-
 
   <?php include("components/script.php"); ?>
 </body>
