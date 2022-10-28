@@ -11,14 +11,16 @@ $tel = trim($_POST["tel"]);
 $address = trim($_POST["address"]);
 
 if ($password !== $confirmpassword) {
+  
   $error = "รหัสผ่านไม่ตรงกัน โปรดลองใหม่";
   header("Location: ../error.php?error=$error");
+
 } else {
 
   $password = md5($password);
 
-  $sql = "INSERT INTO users (firstname, lastname, email, password, tel, address)
-  VALUES ('$firstname', '$lastname', '$email', '$password', '$tel', '$address')";
+  $sql = "INSERT INTO users (firstname, lastname, email, password, tel, address, status)
+  VALUES ('$firstname', '$lastname', '$email', '$password', '$tel', '$address', 'user')";
 
   if ($conn->query($sql) === TRUE) {
     header("Location: ../index.php");

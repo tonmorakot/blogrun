@@ -9,7 +9,10 @@ include("components/head.php");
   <div class="blogrun">
     <div class="col-md-12">
       <div class="row">
-        <h1><?=$_GET["error"];?></h1>
+        <h1><?= $_GET["error"]; ?></h1>
+      </div>
+      <div class="row">
+        <div class="col-md-3"><button class="btn btn-danger" onclick="history.back()">ย้อนกลับ</button></div>
       </div>
     </div>
   </div>

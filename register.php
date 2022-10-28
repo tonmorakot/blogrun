@@ -13,7 +13,7 @@ include("components/head.php");
 
         <div class="col-md-12">
           <h4 class="mb-3">สมัครสมาชิก</h4>
-          <form method="post" action="controller/insert_register.php" class="needs-validation" novalidate="">
+          <form method="post" action="controller/insert_register.php" class="needs-validation">
             <div class="row g-3">
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">ชื่อ</label>
@@ -42,7 +42,7 @@ include("components/head.php");
 
               <div class="col-12">
                 <label for="tel" class="form-label">โทรศัพท์</label>
-                <input type="text" class="form-control" id="tel" name="tel" required>
+                <input type="tel" class="form-control" id="tel" name="tel" pattern="[0-9]{10}" required>
               </div>
 
               <div class="col-12">

@@ -1,5 +1,5 @@
 <?php
-$title = "หน้าหลัก";
+$title = "จัดการผู้ใช้";
 $check_page = "admin";
 include("../components/head.php");
 ?>
@@ -10,7 +10,7 @@ include("../components/head.php");
   <div class="blogrun">
     <div class="col-md-12">
       <div class="row">
-
+        จัดการประชาสัมพันธ์
       </div>
     </div>
   </div>
