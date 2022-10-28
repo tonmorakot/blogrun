@@ -1,5 +1,5 @@
 <?php
-$title = "หน้าหลัก";
+$title = "ประชาสัมพันธ์";
 $check_page = "user";
 include("components/head.php");
 ?>

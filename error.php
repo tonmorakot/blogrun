@@ -1,5 +1,5 @@
 <?php
-$title = "กระดานสนทนา";
+$title = "Error";
 $check_page = "user";
 include("components/head.php");
 ?>
