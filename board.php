@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = "กระดานสนทนา";
 $check_page = "user";
 include("components/head.php");
@@ -8,9 +9,11 @@ include("components/head.php");
   <?php include("components/navbar.php"); ?>
   <div class="blogrun">
     <div class="col-md-12">
-      <div class="row">
-        <button type="button" class="btn btn-primary">ตั้งกระทู้</button>
-      </div>
+      <?php if(isset($_SESSION["login"]) && $_SESSION["login"]) { ?>
+        <div class="row">
+          <button type="button" class="btn btn-primary">ตั้งกระทู้</button>
+        </div>
+      <?php } ?>
       <div class="row mt-3">
         <table class="table">
           <thead>

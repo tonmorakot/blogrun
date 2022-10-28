@@ -1,4 +1,8 @@
 <?php
+session_start();
+if($_SESSION["status"] !== "admin"){
+  header("Location: ../controller/logout.php");
+}
 $title = "จัดการผู้ใช้";
 $check_page = "admin";
 include("../components/head.php");
