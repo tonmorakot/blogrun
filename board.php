@@ -9,41 +9,43 @@ include("components/head.php");
   <?php include("components/navbar.php"); ?>
   <div class="blogrun">
     <div class="col-md-12">
-      <?php if(isset($_SESSION["login"]) && $_SESSION["login"]) { ?>
+      <?php if (isset($_SESSION["login"]) && $_SESSION["login"]) { ?>
         <div class="row">
-          <button type="button" class="btn btn-primary">ตั้งกระทู้</button>
+          <a href="board_new.php" type="button" class="btn btn-primary">ตั้งกระทู้</a>
         </div>
       <?php } ?>
       <div class="row mt-3">
+
         <table class="table">
           <thead>
             <tr>
               <th scope="col">ลำดับ</th>
-              <th scope="col">ชื่อกระทู้</th>
+              <th scope="col">ชื่อกระดานสนทนา</th>
               <th scope="col">รายละเอียด</th>
-              <th scope="col">จัดการ</th>
+              <th scope="col">ผู้สร้าง</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            <?php include("controller/select_board.php"); ?>
+            <?php include("controller/select_user.php"); ?>
+            <?php $i = $result->num_rows; ?>
+            <?php if ($result->num_rows > 0) { ?>
+              <?php while ($row = $result->fetch_assoc()) { ?>
+
+                <tr>
+                  <th scope="row"><?= $row["id"] ?></th>
+                  <td><?= $row["board_name"] ?></td>
+                  <td><?= $row["board_detail"] ?></td>
+                  <td><?=user_search($row["board_create_id"]) ?></td>
+                </tr>
+
+                <?php $i--; ?>
+              <?php } ?>
+            <?php } ?>
+
           </tbody>
         </table>
+
       </div>
     </div>
   </div>

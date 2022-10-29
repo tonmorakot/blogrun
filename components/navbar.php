@@ -25,7 +25,7 @@
               <a class="nav-link" href="manage_promote.php">จัดการประชาสัมพันธ์</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="manage_board.php">จัดการกระดาษสนทนา</a>
+              <a class="nav-link" href="manage_board.php">จัดการกระดานสนทนา</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="manage_users.php">จัดการผู้ใช้</a>

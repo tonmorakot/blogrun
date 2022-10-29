@@ -13,7 +13,7 @@ include("components/head.php");
 
         <div class="col-md-12">
           <h4 class="mb-3">สมัครสมาชิก</h4>
-          <form method="post" action="controller/insert_register.php" class="needs-validation">
+          <form method="post" action="controller/insert_user.php" class="needs-validation">
             <div class="row g-3">
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">ชื่อ</label>

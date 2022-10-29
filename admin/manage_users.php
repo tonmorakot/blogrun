@@ -39,7 +39,11 @@ include("../components/head.php");
               <td><?=$row["tel"]?></td>
               <td><?=$row["address"]?></td>
               <td><?=$row["status"]?></td>
-              <td><button class="btn btn-danger">ลบ</button></td>
+              <td>
+                <?php if($row["status"] == "user") { ?>
+                <a href="../controller/delete_user.php?id=<?= $row["id"]; ?>" class="btn btn-danger">ลบ</a>
+                <?php } ?>
+              </td>
             </tr>
           <?php $i++; ?>
           <?php } ?>
