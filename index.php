@@ -9,97 +9,30 @@ include("components/head.php");
 
   <div class="blogrun">
     <div class="col-md-12">
+
       <div class="row">
 
+      <?php include("controller/select_promote.php"); ?>
+      <?php if ($result->num_rows > 0) { ?>
+      <?php while ($row = $result->fetch_assoc()) { ?>
+
         <div class="col-md-4 mt-3">
 
           <div class="card">
             <div class="card-header">
-              Lorem ipsum dolor sit amet.
+              <?=$row["promote_name"]; ?>
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo maxime in perspiciatis necessitatibus doloremque facilis numquam. Rerum vero quaerat aut?</p>
+              <?=$row["promote_detail"]; ?>
               </blockquote>
             </div>
           </div>
 
         </div>
 
-        <div class="col-md-4 mt-3">
-
-          <div class="card">
-            <div class="card-header">
-              Lorem ipsum dolor sit amet.
-            </div>
-            <div class="card-body">
-              <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo maxime in perspiciatis necessitatibus doloremque facilis numquam. Rerum vero quaerat aut?</p>
-              </blockquote>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-md-4 mt-3">
-
-          <div class="card">
-            <div class="card-header">
-              Lorem ipsum dolor sit amet.
-            </div>
-            <div class="card-body">
-              <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo maxime in perspiciatis necessitatibus doloremque facilis numquam. Rerum vero quaerat aut?</p>
-              </blockquote>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-md-4 mt-3">
-
-          <div class="card">
-            <div class="card-header">
-              Lorem ipsum dolor sit amet.
-            </div>
-            <div class="card-body">
-              <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo maxime in perspiciatis necessitatibus doloremque facilis numquam. Rerum vero quaerat aut?</p>
-              </blockquote>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-md-4 mt-3">
-
-          <div class="card">
-            <div class="card-header">
-              Lorem ipsum dolor sit amet.
-            </div>
-            <div class="card-body">
-              <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo maxime in perspiciatis necessitatibus doloremque facilis numquam. Rerum vero quaerat aut?</p>
-              </blockquote>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-md-4 mt-3">
-
-          <div class="card">
-            <div class="card-header">
-              Lorem ipsum dolor sit amet.
-            </div>
-            <div class="card-body">
-              <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo maxime in perspiciatis necessitatibus doloremque facilis numquam. Rerum vero quaerat aut?</p>
-              </blockquote>
-            </div>
-          </div>
-
-        </div>
+        <?php } ?>
+        <?php } ?>
 
       </div>
 

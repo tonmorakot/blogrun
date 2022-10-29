@@ -1,7 +1,8 @@
 <?php
 session_start();
 if($_SESSION["status"] !== "admin"){
-  header("Location: ../controller/logout.php");
+  $error = "คุณไม่มีสิทธิ์เข้าถึงหน้านี้ !!!";
+  header("Location: ../error.php?error=$error");
 }
 $title = "จัดการผู้ใช้";
 $check_page = "admin";

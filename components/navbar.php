@@ -49,16 +49,20 @@
           <span class="text-white me-2"><?= $_SESSION["lastname"] ?></span>
 
           <?php if($check_page == "admin") { ?>
+            <a href="../admin/index.php" class="btn btn-outline-primary me-2">จัดการ</a> 
             <a href="../controller/logout.php" class="btn btn-outline-danger me-2">logout</a> 
           <?php } else if($check_page == "user") { ?>
+            <?php if($_SESSION["status"] == "admin") { ?>
+              <a href="admin/index.php" class="btn btn-outline-primary me-2">จัดการ</a> 
+            <?php } ?>
             <a href="controller/logout.php" class="btn btn-outline-danger me-2">logout</a> 
           <?php } ?>
 
         <?php } else { ?>
 
           <form method="post" action="controller/login.php" class="d-flex">
-            <input class="form-control me-2" type="text" name="email_login" placeholder="Email">
-            <input class="form-control me-2" type="password" name="password" placeholder="Password">
+            <input class="form-control me-2" type="text" name="email_login" placeholder="Email" required>
+            <input class="form-control me-2" type="password" name="password" placeholder="Password" required>
             <button class="btn btn-outline-success me-2" type="submit">login</button>
             <a href="register.php" class="btn btn-outline-primary me-2">register</a>
           </form>
